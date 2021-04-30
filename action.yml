@@ -5,6 +5,10 @@ inputs:
     description: 'Slack webhook URL'
     required: true
     default: ''
+  content:
+    description: 'Content to be sent to the incoming webhook, in JSON format'
+    required: true
+    default: '{ text: "Content not set" }'
 runs:
   using: 'node12'
   main: 'index.js'
