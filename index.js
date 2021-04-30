@@ -9,5 +9,9 @@ console.log(JSON.stringify(content));
 
 // Send the notification
 (async () => {
-  await webhook.send(content);
+  try {
+    await webhook.send(content);
+  } catch (error) {
+    core.setFailed(error.message);
+  }
 })();
