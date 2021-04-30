@@ -1,2 +1,12 @@
 const core = require('@actions/core');
-console.log(core.getInput('slack-webhook-url'));
+
+const url = core.getInput('slack-webhook-url');
+const webhook = new IncomingWebhook(url);
+
+// Send the notification
+(async () => {
+  await webhook.send({
+    text: 'This is a test',
+  });
+})();
+
