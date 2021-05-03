@@ -1,5 +1,5 @@
-name: 'slack-notify'
-description: 'Send Slack notifications'
+name: 'slack-webhook-payload'
+description: 'Send payloads to a Slack webhook'
 inputs:
   slack-webhook-url:
     description: 'Slack webhook URL'
